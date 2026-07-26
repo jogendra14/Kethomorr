@@ -92,7 +92,7 @@ export default function Hero() {
       <div>
         <HeroHeader />
       </div>
-      <section className="relative w-full h-[85vh] min-h-125 max-h-200 overflow-hidden">
+      <section className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[85vh] min-h-65 sm:min-h-87.5 md:min-h-112.5 overflow-hidden">
         {/* Slides Container */}
         <div
           onTransitionEnd={handleTransitionEnd}
@@ -112,9 +112,9 @@ export default function Hero() {
               <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent" />
 
               {/* Text Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10 md:p-14 text-white">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 drop-shadow-lg">{img.title}</h2>
-                <p className="text-sm sm:text-base md:text-lg opacity-90 drop-shadow">{img.subtitle}</p>
+              <div className="absolute inset-0 flex flex-col justify-end md:justify-center px-5 sm:px-8 md:px-14 pb-8 md:pb-0 text-white">
+                <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 leading-tight drop-shadow-lg max-w-2xl">{img.title}</h2>
+                <p className="text-xs sm:text-base md:text-lg lg:text-xl opacity-90 drop-shadow max-w-xl">{img.subtitle}</p>
               </div>
             </div>
           ))}
@@ -123,7 +123,7 @@ export default function Hero() {
         {/* Prev Button */}
         <button
           onClick={prev}
-          className="absolute top-1/2 left-3 sm:left-5 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white/40 transition-all duration-300 border border-white/30"
+          className="absolute top-1/2 left-3 sm:left-5 -translate-y-1/2 hidden sm:flex w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm text-white  items-center justify-center hover:bg-white/40 transition-all duration-300 border border-white/30"
           aria-label="Previous slide"
         >
           <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
@@ -134,13 +134,15 @@ export default function Hero() {
         {/* Next Button */}
         <button
           onClick={next}
-          className="absolute top-1/2 right-3 sm:right-5 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white/40 transition-all duration-300 border border-white/30"
+          className="absolute top-1/2 right-3 sm:right-5 -translate-y-1/2 hidden sm:flex w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm text-white items-center justify-center hover:bg-white/40 transition-all duration-300 border border-white/30"
           aria-label="Next slide"
         >
           <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
           </svg>
         </button>
+
+        
       </section>
     </>
   );

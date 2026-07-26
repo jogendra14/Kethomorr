@@ -7,60 +7,98 @@ import "swiper/css/navigation";
 
 const LatestProducts = () => {
   return (
-    <section className="max-w-7xl mx-auto mt-4 pt-4 ">
-      <div className="flex justify-between items-center mb-3 px-4">
-        <h2 className="text-2xl font-bold">LATEST PRODUCTS</h2>
-        <button className="text-red-600 font-semibold">View All</button>
+    <section className="max-w-7xl mx-auto mt-4 py-4 px-3 sm:px-4">
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold">
+          LATEST PRODUCTS
+        </h2>
+
+        <button className="text-sm sm:text-base text-red-600 font-semibold hover:underline">
+          View All
+        </button>
       </div>
 
-        <Swiper  
-          spaceBetween={20}
-          slidesPerView={5}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            640: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            1024: { slidesPerView: 5 }, 
-          }}
-        >
-          {products.map((item) => (
-            <SwiperSlide key={item.id}>
-              <ProductCard product={item} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      <Swiper
+        spaceBetween={16}
+        breakpoints={{
+          320: {
+            slidesPerView: 1.2,
+            spaceBetween: 12,
+          },
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 14,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 16,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 18,
+          },
+          1280: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+        }}
+      >
+        {products.map((item) => (
+          <SwiperSlide key={item.id}>
+            <ProductCard product={item} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 };
 
 const TrendingProducts = () => {
   return (
-    <section className="max-w-7xl mx-auto pt-4 ">
-      <div className="flex justify-between items-center mb-3 px-4">
-        <h2 className="text-2xl font-bold">TRENDING PRODUCTS</h2>
-        <button className="text-red-600 font-semibold">View All</button>
+    <section className="max-w-7xl mx-auto py-4 px-3 sm:px-4">
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold">
+          TRENDING PRODUCTS
+        </h2>
+
+        <button className="text-sm sm:text-base text-red-600 font-semibold hover:underline">
+          View All
+        </button>
       </div>
 
-        <Swiper  
-          spaceBetween={20}
-          slidesPerView={5}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            640: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            1024: { slidesPerView: 5 },
-          }}
-        >
-          {products.map((item) => (
-            <SwiperSlide key={item.id}>
-              <ProductCard product={item} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      
+      <Swiper
+        spaceBetween={16}
+        breakpoints={{
+          320: {
+            slidesPerView: 1.2,
+            spaceBetween: 12,
+          },
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 14,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 16,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 18,
+          },
+          1280: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+        }}
+      >
+        {products.map((item) => (
+          <SwiperSlide key={item.id}>
+            <ProductCard product={item} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 };
 
-
-export {LatestProducts, TrendingProducts };
+export { LatestProducts, TrendingProducts };

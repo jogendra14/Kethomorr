@@ -12,7 +12,7 @@ import Footer from '../components/Footer.jsx';
 const Home = () => {
   return (
     <>
-      <div className='m-0 p-0'>
+      <div>
         <Navbar/>
         <Hero/>
         <Ad/>
