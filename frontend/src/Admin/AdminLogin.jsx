@@ -1,4 +1,4 @@
-import axios from "axios";
+import API from "../api/axios";
 import { FaLock, FaEnvelope } from "react-icons/fa";
 import { ShieldCheck } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -17,10 +17,10 @@ const AdminLogin = () => {
     setError("");
 
     try {
-      const { data } = await axios.post("http://localhost:5000/api/auth/login", {
-        email,
-        password,
-      });
+      const { data } = await API.post("/auth/login", {
+  email,
+  password,
+});
 
       if (data.role !== "admin") {
         setError("Access Denied. Admin only.");

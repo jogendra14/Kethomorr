@@ -3,13 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { deleteDeal } from "../../api/dealApi";
 
+
 export default function Deals() {
   const [products, setProducts] = useState([]);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/deals")
+    fetch(`${import.meta.env.VITE_API_URL}/deals`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -19,7 +20,7 @@ export default function Deals() {
   }, []);
 
   const fetchProducts = () => {
-    fetch("http://localhost:5000/api/deals")
+    fetch(`${import.meta.env.VITE_API_URL}/deals`)
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));

@@ -10,7 +10,7 @@ export default function Product() {
   const [products, setProducts] = useState([]);
 
   useEffect( () => {
-      fetch("http://localhost:5000/api/products")
+      fetch(`${import.meta.env.VITE_API_URL}/products`)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
