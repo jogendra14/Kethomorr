@@ -1,0 +1,24 @@
+{
+  "name": "kethomorr",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "microservice"
+  ],
+  "license": "ISC",
+  "author": "Jogendra",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd backend && npm install && cd ../frontend && npm install",
+    "dev:server": "cd backend && npm run dev",
+    "dev:client": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "cd frontend && npm run build"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.4",
+    "lucide-react": "^1.25.0",
+    "react-icons": "^5.7.0"
+  }
+}
