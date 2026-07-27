@@ -25,22 +25,21 @@ export default function Product() {
       <Navbar />
       <HeroHeader/>
       <div className="bg-gray-100 min-h-screen">
-        <div className="max-w-7xl mx-auto p-5">
-          <div className="grid lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl m-2 mx-auto flex gap-2 sm:gap-3 md:gap-5 lg:gap-6">
             <div>
               <FilterSidebar />
             </div>
 
-            <div className="lg:col-span-3">
-              <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-7">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1 sm:gap-2 md:gap-3">
+              
+            {/* </div><div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-7"> */}
                 {products.map((product) => (
                   <ShowProduct key={product._id} product={product} />
                 ))}
-              </div>
+              
             </div>
           </div>
         </div>
-      </div>
       <Footer />
     </>
   );
