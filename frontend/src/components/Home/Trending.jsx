@@ -7,8 +7,8 @@ import "swiper/css/navigation";
 
 const LatestProducts = () => {
   return (
-    <section className="max-w-7xl mx-auto mt-4 py-4 px-3 sm:px-4">
-      <div className="flex items-center justify-between mb-4">
+    <section className="max-w-7xl mx-auto mt-4  px-3 sm:px-4">
+      <div className="flex items-center justify-between mb-2">
         <h2 className="text-lg sm:text-xl md:text-2xl font-bold">
           LATEST PRODUCTS
         </h2>
@@ -22,24 +22,24 @@ const LatestProducts = () => {
         spaceBetween={16}
         breakpoints={{
           320: {
-            slidesPerView: 1.2,
-            spaceBetween: 12,
+            slidesPerView: 2,
+            spaceBetween: 8,
           },
           480: {
-            slidesPerView: 2,
-            spaceBetween: 14,
+            slidesPerView: 2.4,
+            spaceBetween: 10,
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 16,
+            spaceBetween: 12,
           },
           1024: {
             slidesPerView: 4,
-            spaceBetween: 18,
+            spaceBetween: 16,
           },
           1280: {
             slidesPerView: 5,
-            spaceBetween: 20,
+            spaceBetween: 18,
           },
         }}
       >
@@ -56,7 +56,7 @@ const LatestProducts = () => {
 const TrendingProducts = () => {
   return (
     <section className="max-w-7xl mx-auto py-4 px-3 sm:px-4">
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-2">
         <h2 className="text-lg sm:text-xl md:text-2xl font-bold">
           TRENDING PRODUCTS
         </h2>
@@ -70,24 +70,24 @@ const TrendingProducts = () => {
         spaceBetween={16}
         breakpoints={{
           320: {
-            slidesPerView: 1.2,
-            spaceBetween: 12,
+            slidesPerView: 2,
+            spaceBetween: 8,
           },
           480: {
-            slidesPerView: 2,
-            spaceBetween: 14,
+            slidesPerView: 2.4,
+            spaceBetween: 10,
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 16,
+            spaceBetween: 12,
           },
           1024: {
             slidesPerView: 4,
-            spaceBetween: 18,
+            spaceBetween: 16,
           },
           1280: {
             slidesPerView: 5,
-            spaceBetween: 20,
+            spaceBetween: 18,
           },
         }}
       >

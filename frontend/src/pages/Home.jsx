@@ -15,9 +15,9 @@ const Home = () => {
       <div className="">
         <Navbar/>
         <HeroHeader />
+        <CategorySlider/>
         <BannerSlider/>
         <Ad/>
-        <CategorySlider/>
         <LatestProducts/>
         <TrendingProducts/>
         <OurServices/>
